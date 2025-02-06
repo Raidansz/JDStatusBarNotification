@@ -1,3 +1,5 @@
+# THIS FORK MODIFIES THE ORIGINAL REPO, MAKING THE VIEW MESSAGE NOTIFICATION APPEAR AT THE BOTTOM OF THE VIEW.
+
 # JDStatusBarNotification
 
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fcalimarkus%2FJDStatusBarNotification%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/calimarkus/JDStatusBarNotification)
