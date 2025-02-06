@@ -366,9 +366,10 @@ class NotificationView: UIView, UIGestureRecognizerDelegate, StylableView {
 
   // MARK: - Layout
   func contentRectForViewMinusSafeAreaInsets() -> CGRect {
-    let topLayoutMargins = self.window?.safeAreaInsets.top ?? 0.0
-    let height = self.bounds.size.height - topLayoutMargins
-    let rect = CGRect(x: 0, y: topLayoutMargins, width: self.bounds.size.width, height: height)
+    let bottomLayoutMargins = self.window?.safeAreaInsets.bottom ?? 0.0 // or top
+    let height = self.bounds.size.height - bottomLayoutMargins
+    let rect = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: height)
+      //CGRect(x: 0, y: topLayoutMargins, width: self.bounds.size.width, height: height) //CGRectMake(0, 0, view.bounds.size.width, height)
 
     switch style.backgroundStyle.backgroundType {
       case .fullWidth:

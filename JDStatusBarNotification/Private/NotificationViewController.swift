@@ -99,10 +99,11 @@ class NotificationViewController: UIViewController, NotificationViewDelegate {
 
     // Resize statusBarView
     let view = statusBarView
-    let safeAreaInset = jdsbWindow.safeAreaInsets.top
+    let safeAreaInset = jdsbWindow.safeAreaInsets.bottom // or top
     let heightIncludingNavBar = safeAreaInset + contentHeight(for: view.style, with: safeAreaInset)
     view.transform = CGAffineTransform.identity
-    view.frame = CGRect(x: 0, y: 0, width: jdsbWindow.frame.size.width, height: heightIncludingNavBar)
+    view.frame = CGRect(x: 0, y: CGRectGetHeight(jdsbWindow.frame) - heightIncludingNavBar, width: jdsbWindow.frame.size.width, height: heightIncludingNavBar)
+      //CGRectMake(0, CGRectGetHeight(window.frame) - heightIncludingNavBar, window.frame.size.width, heightIncludingNavBar);
 
     // Relayout progress bar
     view.progressBarPercentage = view.progressBarPercentage
